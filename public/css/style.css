@@ -59,6 +59,150 @@ code {
 	clear: both;
 }
 
+/* icon classes -------------------- */
+.icon {
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	padding-left: 20px;
+}
+.icon_accept {
+	background-image: url(../images/icons/accept.png);
+}
+.icon_add {
+	background-image: url(../images/icons/add.png);
+}
+.icon_anchor {}
+.icon_arrow_left {}
+.icon_arrow_right {}
+.icon_arrow_up {}
+.icon_arrow_down {}
+.icon_asterisk_orange {}
+.icon_asterisk_yellow {}
+.icon_attach {}
+.icon_award_star_gold_3 {}
+.icon_bin {}
+.icon_bomb {}
+.icon_box {}
+.icon_book {}
+.icon_bug {
+	background-image: url(../images/icons/bug.png);
+}
+.icon_calendar {}
+.icon_calendar_add {}
+.icon_calendar_delete {}
+.icon_calendar_view_day {}
+.icon_calendar_edit {}
+.icon_cancel {
+	background-image: url(../images/icons/cancel.png);
+}
+.icon_chart_bar {}
+.icon_chart_pie {}
+.icon_cog {
+	background-image: url(../images/icons/cog.png);
+}
+.icon_comment {
+	background-image: url(../images/icons/comment.png);
+}
+.icon_comments {
+	background-image: url(../images/icons/comments.png);
+}
+.icon_comment_add {}
+.icon_comment_delete {}
+.icon_contrast_low {}
+.icon_contrast {}
+.icon_control_pause_blue {}
+.icon_control_pause {}
+.icon_control_play_blue {}
+.icon_control_play {}
+.icon_cross {}
+.icon_email {
+	background-image: url(../images/icons/email.png);
+}
+.icon_error {
+	background-image: url(../images/icons/error.png);
+}
+.icon_exclamation {
+	background-image: url(../images/icons/exclamation.png);
+}
+.icon_eye {}
+.icon_feed {}
+.icon_female {}
+.icon_male {}
+.icon_flag_blue {}
+.icon_group {
+	background-image: url(../images/icons/group.png);
+}
+.icon_heart {
+	background-image: url(../images/icons/heart.png);
+}
+.icon_help {
+	background-image: url(../images/icons/help.png);
+}
+.icon_house {
+	background-image: url(../images/icons/house.png);
+}
+.icon_information {
+	background-image: url(../images/icons/information.png);
+}
+.icon_key {}
+.icon_lightbulb {}
+.icon_link {
+	background-image: url(../images/icons/link.png);
+}
+.icon_lock {
+	background-image: url(../images/icons/lock.png);
+}
+.icon_lock_open {}
+.icon_magnifier {}
+.icon_male {}
+.icon_status_online {}
+.icon_status_online {}
+.icon_user_green {}
+.icon_user_red {}
+.icon_user {
+	background-image: url(../images/icons/user.png);
+}
+.icon_user_grey {}
+.icon_user_female {
+	background-image: url(../images/icons/user_female.png);
+}
+.icon_tux {}
+.icon_user_suit {}
+.icon_wand {}
+.icon_wrench {
+	background-image: url(../images/icons/wrench.png);
+}
+.icon_zoom {
+	background-image: url(../images/icons/icon_zoom.png);
+}
+.icon_zoom_in {
+	background-image: url(../images/icons/zoom_in.png);
+}
+.icon_zoom_out {
+	background-image: url(../images/icons/zoom_out.png);
+}
+
+/* bullet classes ------------------ */
+.bullet {
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	padding-left: 20px;
+}
+.bullet_add {}
+.bullet_error {}
+.bullet_green {}
+.bullet_blue {}
+.bullet_orange {}
+.bullet_red {}
+.bullet_go {}
+.bullet_toggle_minus {}
+.bullet_toggle_plus {}
+.bullet_star {}
+.bullet_wrench {}
+.bullet_yellow {}
+
 
 /* user edit styles ---------------- */
 ul.user_profile,

@@ -23,12 +23,8 @@ class News extends CI_Controller {
 		
 		$data['news'] = $this->news_model->get_news();
 		
-		$this->parser->parse('shared/header', $data);
-      	
 		$this->parser->parse('news/index', $data);
 		
-		$this->parser->parse('shared/sidebar', $data);
-      	$this->load->view('shared/footer');
 		
 		
 	}
@@ -45,12 +41,7 @@ class News extends CI_Controller {
 		$data['title'] = $data['news_item']['title'];
 		$data['sidebar_header'] = "Menu";
 		
-		$this->parser->parse('shared/header', $data);
-      	
 		$this->load->view('news/view', $data);
-		
-		$this->parser->parse('shared/sidebar', $data);
-      	$this->load->view('shared/footer');
 		
 	}
 	
@@ -67,13 +58,10 @@ class News extends CI_Controller {
 			$data['title'] = 'Create a news item';
 			$data['content'] = "Fill out the form below to create a new news item.";
 	 		$data['sidebar_header'] = "Menu";
-		
-			$this->parser->parse('shared/header', $data);
-      	
-			$this->parser->parse('news/create', $data);
 			
-			$this->parser->parse('shared/sidebar', $data);
-			$this->load->view('shared/footer');
+			$this->session->set_flashdata('warning', 'Validation failed. Please try again.');
+			
+			$this->parser->parse('news/create', $data);
 			
 		}
 		else
@@ -85,10 +73,10 @@ class News extends CI_Controller {
 			$data['content'] = "You should make more news!";
 	 		$data['sidebar_header'] = "Menu";
 			
-			$this->parser->parse('shared/header', $data);
-      		$this->parser->parse('news/success', $data);
-			$this->parser->parse('shared/sidebar', $data);
-			$this->load->view('shared/footer');
+			$this->session->set_flashdata('success', 'Your news has been created');
+				
+			$this->parser->parse('news/index', $data);
+			
 		}
 	}
 	

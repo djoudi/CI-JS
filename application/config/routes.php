@@ -71,6 +71,9 @@ $route['microposts'] = 'microposts';
 $route['comments/(:any)'] = 'comments/$1';
 $route['comments'] = 'comments';
 
+$route['todos/(:any)'] = 'todos/$1';
+$route['todos'] = 'todos';
+
 // route the welcome controller
 // basic welcome controller
 $route['welcome'] = 'welcome';

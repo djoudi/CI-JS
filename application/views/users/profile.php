@@ -5,7 +5,7 @@
 						);
 ?>
 <h1>
-	{title}
+	<?= $title; ?>
 </h1>
 
 <div id="content">
@@ -17,7 +17,7 @@
         </p>
     <?php } ?>
     
-	<p>{content}</p>
+	<p><?= $content; ?></p>
     
     
     <?= ul($user, $profile_attributes); ?>

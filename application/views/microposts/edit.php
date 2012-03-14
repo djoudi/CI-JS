@@ -1,10 +1,13 @@
+<?php $this->load->view('shared/header'); ?>
 <h1>
-	{title}
+	<?= $title; ?>
 </h1>
 
 <div id="content">
 
-	<p>{content}</p>
+	<?=$this->load->view("shared/flash");?>
+	
+	<p><?= $content; ?></p>
     
     <?php echo validation_errors(); ?>
 
@@ -36,5 +39,8 @@
 
 </div><!-- /#content -->
 
-
+<?php 
+	$this->load->view('shared/sidebar');
+    $this->load->view('shared/footer');		
+?>
 	

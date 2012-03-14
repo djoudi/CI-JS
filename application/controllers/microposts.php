@@ -61,13 +61,9 @@ class Microposts extends CI_Controller {
 		$data['content'] = $this->content;
 		
 		$data['microposts'] = Micropost::all();
-		
-		$this->parser->parse('shared/header', $data);
-      	
+			
 		$this->parser->parse('microposts/showall', $data);
 		
-		$this->parser->parse('shared/sidebar', $data);
-      	$this->load->view('shared/footer');	
 	}
 	
 	
@@ -92,14 +88,8 @@ class Microposts extends CI_Controller {
 				$data['micropost']['content'] = $micropost->content;
 				$data['micropost']['id'] = $micropost->id;
 				
-				$this->parser->parse('shared/header', $data);
-				
 				$this->parser->parse('microposts/show', $data);
 				
-				$this->parser->parse('shared/sidebar', $data);
-				$this->load->view('shared/footer');
-			
-			
 			} else {
 				
 				$this->session->set_flashdata('warning', 'Odd, we could not find that post!');
@@ -137,14 +127,8 @@ class Microposts extends CI_Controller {
 				$data['micropost']['content'] = $micropost->content;
 				$data['micropost']['id'] = $micropost->id;
 				
-				$this->parser->parse('shared/header', $data);
-				
 				$this->parser->parse('microposts/edit', $data);
 				
-				$this->parser->parse('shared/sidebar', $data);
-				$this->load->view('shared/footer');
-			
-			
 			} else {
 				
 				$this->session->set_flashdata('warning', 'Odd, we could not find that post!');
@@ -199,12 +183,7 @@ class Microposts extends CI_Controller {
 		$data['content'] = $this->content;
 		$data['user_id'] = $this->session->userdata('user_id'); 
 		
-		$this->parser->parse('shared/header', $data);
-      	
 		$this->parser->parse('microposts/create', $data);
-		
-		$this->parser->parse('shared/sidebar', $data);
-      	$this->load->view('shared/footer');
 	}
 	
 	
@@ -242,7 +221,6 @@ class Microposts extends CI_Controller {
 			
 			$this->session->set_flashdata('success', 'Your micropost has been saved');
 			redirect('/microposts/showall', 'refresh');
-			
 			
 		} else {
 			

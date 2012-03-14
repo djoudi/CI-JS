@@ -22,12 +22,12 @@
 
 ?>
 <h1>
-	{title}
+	<?= $title; ?>
 </h1>
 
 <div id="content">
 
-	<p>{content}</p>
+	<p><?= $content; ?></p>
     
 		<?php echo validation_errors(); ?>
         

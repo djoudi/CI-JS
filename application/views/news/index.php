@@ -1,10 +1,13 @@
+<?php $this->load->view('shared/header'); ?>
+
 <h1>
-	{title}
+	<?= $title; ?>
 </h1>
 
 <div id="content">
-
- 	
+	
+    <?=$this->load->view("shared/flash");?>
+	
     <p><?= anchor(site_url("news/create"), "create new news item", 'title="create new news item"'); ?></p>
    
       
@@ -21,3 +24,8 @@
     
     
 </div><!-- /#content -->
+
+<?php
+	$this->load->view('shared/sidebar');
+    $this->load->view('shared/footer');
+?>

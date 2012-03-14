@@ -25,7 +25,7 @@
 
 	<base href="<?= site_url() ?>/index.php" />
 
-	<title>{title}</title>
+	<title><?php $title ?></title>
 
 	
 </head>

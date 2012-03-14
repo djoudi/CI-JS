@@ -1,11 +1,14 @@
-	<div class="clear"></div>
+<?php 
+	$this->benchmark->mark('code_end');
+?>	
+    <div class="clear"></div>
     	
 	</div><!-- /#inner-wrapper -->
 	
     
 	
 	<div id="footer">
-    	<p>Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+    	<p>Page rendered in <strong><?= $this->benchmark->elapsed_time('code_start', 'code_end'); ?></strong> seconds</p>
     </div>
 
 </div><!-- /#container -->

@@ -1,3 +1,5 @@
+<?php $this->load->view('shared/header'); ?>
+      
 <h1>
 	Heading for a micropost.....
 </h1>
@@ -25,3 +27,8 @@
 
 
 </div><!-- /#content -->
+
+<?php 
+	$this->load->view('shared/sidebar');
+    $this->load->view('shared/footer');		
+?>
