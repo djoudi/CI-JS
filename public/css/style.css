@@ -1,0 +1,96 @@
+
+::selection{ background-color: #E13300; color: white; }
+::moz-selection{ background-color: #E13300; color: white; }
+::webkit-selection{ background-color: #E13300; color: white; }
+
+body {
+	background-color: #fff;
+	margin: 40px;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+
+code {
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 14px 0 14px 0;
+	padding: 12px 10px 12px 10px;
+}
+
+#container{
+	margin: 10px auto;
+	border: 1px solid #D0D0D0;
+	-webkit-box-shadow: 0 0 8px #D0D0D0;
+	width: 960px;
+}
+
+#inner-wrapper {}
+
+#content{
+	margin: 0 15px 0 15px;
+	width: 730px;
+	float: right;
+}
+
+#sidebar {
+	width: 160px;
+	float: left;
+	padding: 0px 20px;
+}
+#submenu {
+	border-top: 1px dotted #D0D0D0;
+}
+
+#footer{
+	text-align: right;
+	font-size: 11px;
+	border-top: 1px solid #D0D0D0;
+	line-height: 32px;
+	padding: 0 10px 0 10px;
+	margin: 20px 0 0 0;
+}
+
+.clear {
+	width: 100%;
+	clear: both;
+}
+
+
+/* user edit styles ---------------- */
+ul.user_profile,
+ul.microposts {
+	list-style-type: none;
+}
+
+.disabled {
+	background-color: #E0E0E0;
+	border: 1px solid #999;
+	color: #999;
+}
+
+.fail {
+	color: #990000;
+	border: 3px solid #990000;
+	background: #FFECEF;
+	padding: 15px;
+	margin: 15px;
+}
+.success {
+	color:#060;
+	border: 3px solid #060;
+	background: #D5FFD9;
+	padding: 15px;
+	margin: 15px;
+}
+.warning,
+.validation {
+	color: #D2A921;
+	border: 3px solid #D2A921;
+	background: #FFE6AA;
+	padding: 15px;
+	margin: 15px;
+}
