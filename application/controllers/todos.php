@@ -48,8 +48,10 @@ class Todos extends CI_Controller {
 		$data['title'] = $this->title;
 		$data['sidebar_header'] = $this->sidebar_header;
 		$data['content'] = $this->content;
+		$data['user_id'] = $this->session->userdata('user_id'); 
 		
-		$data['todos'] = Todo::all();
+		$data['todos'] = Todo::find_all_by_user_id($this->session->userdata('user_id'));
+
 			
 		$this->parser->parse('todos/showall', $data);
 	}
@@ -82,13 +84,13 @@ class Todos extends CI_Controller {
 			} else {
 				
 				$this->session->set_flashdata('warning', 'Odd, we could not find that todo!');
-				redirect('/todos/showall', 'refresh');
+				redirect('todos/', 'refresh');
 			
 			}
 		} else {
 			
 			$this->session->set_flashdata('warning', 'We are sorry, but this todo does not exist');
-			redirect('/todos/showall', 'refresh');
+			redirect('todos/', 'refresh');
 		}
 		
 	}
@@ -109,15 +111,15 @@ class Todos extends CI_Controller {
 			
 			if($todo->delete()) {
 				$this->session->set_flashdata('success', 'Your Todo has been deleted');
-				redirect('/todos/showall', 'refresh');
+				redirect('/todos/', 'refresh');
 			} else {
 				$this->session->set_flashdata('fail', 'Your Todo was not able to be deleted');
-				redirect('/todos/showall', 'refresh');
+				redirect('todos/', 'refresh');
 			}
 				
 		} else {
 			$this->session->set_flashdata('fail', 'There was a problem with deleting your Todo.');
-			redirect('/todos/showall', 'refresh');
+			redirect('todos/', 'refresh');
 		}
 		
 	}
@@ -141,7 +143,7 @@ class Todos extends CI_Controller {
 		{
 			$this->session->set_flashdata('warning', 'Your Todo was missing essential info and could not be saved. 
 													  Please try again');
-			redirect('/todos/showall', 'refresh');
+			redirect('todos/', 'refresh');
 		}
 			
 		if($slug = Todo::create_slug($this->input->post('title', TRUE))) {
@@ -155,12 +157,12 @@ class Todos extends CI_Controller {
 			$todo->save();
 			
 			$this->session->set_flashdata('success', 'Your Todo has been saved');
-			redirect('/todos/showall', 'refresh');
+			redirect('todos/', 'refresh');
 			
 		} else {
 			
 			$this->session->set_flashdata('warning', 'We cannot save, a Todo with this title already exists');
-			redirect('/todos/showall', 'refresh');
+			redirect('todos/', 'refresh');
 			
 		}
 		

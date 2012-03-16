@@ -12,20 +12,18 @@
     <?=$this->load->view("todos/create");?>
 	
     
+    <ul id="todo_list" class="todos todo_list">
 	 <?php foreach ($todos as $todo): ?>
     
-        <h2><?php echo $todo->title ?></h2>
-        <div id="main">
-            <?php echo $todo->content ?>
-        </div>
-        <p>
+        <li class="todo">
+			<span><?php echo $todo->title ?></span>
         	<a href="todos/show/<?php echo $todo->id ?>">show </a> 
             <a href="todos/edit/<?php echo $todo->id ?>">edit </a> 
         	<a href="todos/delete/<?php echo $todo->id ?>">delete </a> 
-        </p>
+        </li>
     
     <?php endforeach ?>
-
+	<ul>
 
 </div><!-- /#content -->
 

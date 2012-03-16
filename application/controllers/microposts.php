@@ -60,7 +60,7 @@ class Microposts extends CI_Controller {
 		$data['sidebar_header'] = $this->sidebar_header;
 		$data['content'] = $this->content;
 		
-		$data['microposts'] = Micropost::all();
+		$data['microposts'] = Micropost::find_all_by_user_id($this->session->userdata('user_id'));
 			
 		$this->parser->parse('microposts/showall', $data);
 		

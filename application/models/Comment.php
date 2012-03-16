@@ -26,4 +26,25 @@ class Comment extends ActiveRecord\Model
 	 						array('user'),
 							array('micropost')
 							);
+	
+	/**
+	 * create_slug
+	 *
+	 * turn the title or name attribute into a page slug & ensure no duplicates in the DB
+	 */
+	public function create_slug($title) {
+		// should take the $name and create a slug out of it...
+		
+		$slug = url_title($title, 'dash', TRUE);
+		
+		$slug_exists = Comment::find_by_slug($slug);
+		
+		// we never want more than a single instance of a slug.
+		if($slug_exists) {
+			return false;
+		} else {
+			return $slug;
+		}
+		
+	}
 }

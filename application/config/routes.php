@@ -74,6 +74,9 @@ $route['comments'] = 'comments';
 $route['todos/(:any)'] = 'todos/$1';
 $route['todos'] = 'todos';
 
+$route['goals/(:any)'] = 'goals/$1';
+$route['goals'] = 'goals';
+
 // route the welcome controller
 // basic welcome controller
 $route['welcome'] = 'welcome';

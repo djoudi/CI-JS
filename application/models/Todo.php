@@ -44,7 +44,7 @@ class Todo extends ActiveRecord\Model
 		
 		$slug = url_title($title, 'dash', TRUE);
 		
-		$slug_exists = User::find_by_username($slug);
+		$slug_exists = Todo::find_by_slug($slug);
 		
 		// we never want more than a single instance of a slug.
 		if($slug_exists) {

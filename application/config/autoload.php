@@ -128,7 +128,8 @@ $autoload['model'] = array();
 |
 */
 
-$autoload['sparks'] = array('php-activerecord/0.0.2');	
+$autoload['sparks'] = array('php-activerecord/0.0.2');	  // DataMapper-ORM is also installed.....
+
 
 // note: path for doctrine2 cannot have the /1.0.0 for some reason or it throws errors
 //$autoload['sparks'] = array('doctrine2');	  
